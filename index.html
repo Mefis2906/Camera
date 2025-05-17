@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Камера</title>
+  <link rel="stylesheet" href="style.css"/>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Камера" />
+</head>
+<body>
+  <div id="camera-container">
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    <div id="top-controls">
+      <select id="timer-select">
+        <option value="0">Таймер: Выкл</option>
+        <option value="3">Таймер: 3с</option>
+        <option value="10">Таймер: 10с</option>
+      </select>
+      <button id="switch-camera">🔄</button>
+    </div>
+
+    <div id="zoom-container">
+      <input type="range" id="zoom-slider" min="1" max="3" step="0.1" value="1" />
+    </div>
+
+    <div id="controls">
+      <button id="capture-button"></button>
+    </div>
+
+    <div id="gallery" class="hidden"></div>
+  </div>
+
+  <div id="preview-container" class="hidden">
+    <img id="preview" />
+    <div id="preview-controls">
+      <button id="save-button">Сохранить</button>
+      <button id="cancel-button">Отмена</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

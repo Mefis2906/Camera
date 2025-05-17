@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  background-color: black;
+  height: 100vh;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+#camera-container, #preview-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0; left: 0;
+}
+
+video, canvas, #preview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+#top-controls {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+#top-controls select, #switch-camera {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#zoom-container {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+#zoom-slider {
+  width: 60%;
+}
+
+#controls {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+#capture-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+#preview-controls {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  z-index: 10;
+}
+
+#save-button, #cancel-button {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#gallery {
+  position: absolute;
+  bottom: 90px;
+  left: 10px;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+#gallery img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid white;
+}
+
+.hidden {
+  display: none;
+}
